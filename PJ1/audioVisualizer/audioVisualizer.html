@@ -1,0 +1,84 @@
+  <html>
+  <head>
+    <title>旋律可视化 by OYYT</title>
+    <meta charset='utf-8'>
+  </head>
+  <style>
+  @font-face {
+    font-family: '方正兰亭宋_GBK';
+    font-style: normal;
+    font-weight: 200;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration:none;
+  }
+  html {
+    overflow: hidden;
+  }
+  body,canvas{
+    transition:background 5s, opacity 3s;
+  }
+  body{
+    height: 600px;
+    width: 1366px;
+    background-image:url("background.jpg");
+    background-position:center,center;
+    background-attachment:fiexd;
+    background-size:cover;
+  }
+
+  #song_name{
+    font-size: 2em;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    position:absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9;
+    opacity: 0.6;
+  }
+
+  #loader{
+    font-size: 5em;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    position:absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9;
+  }
+
+
+  #loader{
+    transition: all 0.5s;
+  }
+
+  #loader:hover{
+    transform:scale(1.2);
+    cursor: pointer;
+  }
+</style>
+
+<body>
+
+  <div id="loader">少女祈祷中...</div>
+  <div id="song_name" style="display:none" ></div>
+
+  <canvas id="canvas" width="1366" height="680" style="position:absolute;z-index:-1"></canvas>
+  <canvas id="bg" width="1366" height="680" style="position:absolute;z-index:-1"></canvas>
+
+  <script type="text/javascript" language="javascript" src="./audioVisualizer.js" charset="utf-8"></script>
+</body>
+</html>
